@@ -1,4 +1,4 @@
-# from django.shortcuts import render
+from django.shortcuts import render
 # from django.http import HttpResponse
 # from users.forms import AlumnoForm
 # from django.contrib.auth import authenticate
@@ -11,6 +11,10 @@ from users.serializers import AlumnoSerializer
 class AlumnoViewSet(viewsets.ModelViewSet):
 	queryset = Alumno.objects.all()
 	serializer_class = AlumnoSerializer
+
+# Home route
+def index(request):
+    return render(request, 'users/base.html')
 
 # def index(request):
 # 	return render(request, 'index.html')
