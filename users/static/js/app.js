@@ -14,11 +14,36 @@ app.config(function($stateProvider, $urlRouterProvider){
     })
     .state('ingreso', {
       url: "/ingreso",
+      templateUrl: 'static/templates/ingreso.html',
+      controller: 'MainCtrl'
+    })
+    .state('vocales', {
+      url: "/vocales",
+      templateUrl: 'static/templates/vocales.html',
+      controller: 'MainCtrl'
+    })
+    .state('cursos', {
+      url: "/cursos",
       templateUrl: 'static/templates/cursos.html',
       controller: 'MainCtrl'
     })
 
   $urlRouterProvider.otherwise('/');
+});
+
+app.controller('imagesCtrl', function ($scope, $http) {
+    $http.get('../static/js/posts.json').
+    success(function(data, status, headers, config) {
+      $scope.json = data;
+    }).
+    error(function(data, status, headers, config) {});
+    var pass = [];
+    $scope.imageId = function(index){
+      pass.push($scope.json.images[index].id);
+      if (pass.length >= 4) {
+        console.log(pass);
+      };
+    };
 });
 
 app.controller('MainCtrl', function($scope, Alumnos, $state){

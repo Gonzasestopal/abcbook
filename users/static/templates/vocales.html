@@ -1,0 +1,60 @@
+
+ 	 <audio id="audio1" src="/static/audio/audio_a.mp3" preload></audio>
+	 <audio id="audio2" src="/static/audio/audio_e.mp3" preload></audio>
+	 <audio id="audio3" src="/static/audio/audio_i.mp3" preload></audio>
+	 <audio id="audio4" src="/static/audio/audio_o.mp3" preload></audio>
+ 	 <audio id="audio5" src="/static/audio/audio_u.mp3" preload></audio>
+ 	 <!-- <div class="container center">
+      <a class = "boton1 " class="btn-flat disabled"><img src="vowel_a.gif" ></a><p></p>
+      <a class = "boton2" class="btn-flat disabled"><img src="vowel_e.gif" ></a><p></p>
+      <a class = "boton3" class="btn-flat disabled"><img src="vowel_i.gif" ></a><p></p>
+      <a class = "boton4" class="btn-flat disabled"><img src="vowel_o.gif" ></a><p></p>
+      <a class = "boton5" class="btn-flat disabled"><img src="vowel_u.gif" ></a><p></p>
+    </div> -->
+    <div class="cursos" ng-controller="imagesCtrl">
+      <div class="container">
+        <div class="row">
+          <div class="col s12">
+            <div class="strike">
+              <span><h4>Vocales</h4></span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+            <div class="col s4 m4" ng-repeat="vocal in json.vocales" id="{{vocal.btn}}">
+              <div class="card">
+                <div class="card-image">
+                  <img ng-src="{{vocal.img}}">
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript">
+    $(document).ready(function(){
+
+      $('#boton1').mouseover(function(){
+        $('audio')[0].play();
+
+      });
+      $('#boton2').mouseover(function(){
+        $('audio')[1].play();
+
+      });
+      $('#boton3').mouseover(function(){
+        $('audio')[2].play();
+
+      });
+      $('#boton4').mouseover(function(){
+        $('audio')[3].play();
+
+      });
+      $('#boton5').mouseover(function(){
+        $('audio')[4].play();
+
+      });
+    });
+   </script>
