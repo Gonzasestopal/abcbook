@@ -56,27 +56,27 @@
     ],
     "vocales":[
         {
-            "id":"A",
+            "id":"a",
             "img":"https://raw.githubusercontent.com/abcbook/abcbookAPI/master/users/static/img/vowel_a.gif",
             "btn":"boton1"
         },
         {
-            "id":"E",
+            "id":"e",
             "img":"https://raw.githubusercontent.com/abcbook/abcbookAPI/master/users/static/img/vowel_e.gif",
             "btn":"boton2"
         },
         {
-            "id":"I",
+            "id":"i",
             "img":"https://raw.githubusercontent.com/abcbook/abcbookAPI/master/users/static/img/vowel_i.gif",
             "btn":"boton3"
         },
         {
-            "id":"O",
+            "id":"o",
             "img":"https://raw.githubusercontent.com/abcbook/abcbookAPI/master/users/static/img/vowel_o.gif",
             "btn":"boton4"
         },
         {
-            "id":"U",
+            "id":"u",
             "img":"https://raw.githubusercontent.com/abcbook/abcbookAPI/master/users/static/img/vowel_u.gif",
             "btn":"boton5"
         }
