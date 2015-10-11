@@ -2,39 +2,39 @@
     "images":[
         {
             "id":"1",
-            "img":"https://raw.githubusercontent.com/abcbook/abcbookAPI/master/users/static/img/cat.gif"
+            "img":"/static/img/cat.gif"
         },
         {
             "id":"2",
-            "img":"https://raw.githubusercontent.com/abcbook/abcbookAPI/master/users/static/img/tree.gif"
+            "img":"/static/img/tree.gif"
         },
         {
             "id":"3",
-            "img":"https://raw.githubusercontent.com/abcbook/abcbookAPI/master/users/static/img/sun.gif"
+            "img":"/static/img/sun.gif"
         },
         {
             "id":"4",
-            "img":"https://raw.githubusercontent.com/abcbook/abcbookAPI/master/users/static/img/vowel_a.gif"
+            "img":"/static/img/vowel_a.gif"
         },
         {
             "id":"5",
-            "img":"https://raw.githubusercontent.com/abcbook/abcbookAPI/master/users/static/img/cat.gif"
+            "img":"/static/img/cat.gif"
         },
         {
             "id":"6",
-            "img":"https://raw.githubusercontent.com/abcbook/abcbookAPI/master/users/static/img/sun.gif"
+            "img":"/static/img/sun.gif"
         },
         {
             "id":"7",
-            "img":"https://raw.githubusercontent.com/abcbook/abcbookAPI/master/users/static/img/tree.gif"
+            "img":"/static/img/tree.gif"
         },
         {
             "id":"8",
-            "img":"https://raw.githubusercontent.com/abcbook/abcbookAPI/master/users/static/img/cat.gif"
+            "img":"/static/img/cat.gif"
         },
         {
             "id":"9",
-            "img":"https://raw.githubusercontent.com/abcbook/abcbookAPI/master/users/static/img/vowel_a.gif"
+            "img":"/static/img/vowel_a.gif"
         }
     ],
     "cursos":[
