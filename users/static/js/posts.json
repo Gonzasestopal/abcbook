@@ -80,5 +80,10 @@
             "img":"https://raw.githubusercontent.com/abcbook/abcbookAPI/master/users/static/img/vowel_u.gif",
             "btn":"boton5"
         }
+    ],
+    "pass":[
+        {
+            "val":"1,1,1,1"
+        }
     ]
 }

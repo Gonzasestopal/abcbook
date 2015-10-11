@@ -42,6 +42,11 @@ app.controller('imagesCtrl', function ($scope, $http) {
       pass.push($scope.json.images[index].id);
       if (pass.length >= 4) {
         console.log(pass);
+        var str = pass.join();
+        console.log(str);
+        angular.forEach($scope.json.pass, function(value, key){
+          console.log(key + ': ' + value);
+        });
       };
     };
 });
