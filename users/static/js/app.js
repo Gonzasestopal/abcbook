@@ -40,8 +40,12 @@ app.config(function($stateProvider, $urlRouterProvider){
   $urlRouterProvider.otherwise('/');
 });
 
-app.controller("soundCtrl",function($scope,ngAudio){
-  $scope.sound = ngAudio.load("/static/audio/audio_a.mp3");
+app.controller("mp3Ctrl",function($scope,ngAudio){
+    $scope.sound = ngAudio.load("static/audio/audio_a.mp3"); // returns NgAudioObject
+    $scope.sound = ngAudio.load("static/audio/audio_e.mp3");
+    $scope.sound = ngAudio.load("static/audio/audio_i.mp3");
+    $scope.sound = ngAudio.load("static/audio/audio_o.mp3");
+    $scope.sound = ngAudio.load("static/audio/audio_u.mp3");
 });
 
 app.controller('imagesCtrl', function($scope, $http, $state) {
