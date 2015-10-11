@@ -12,6 +12,11 @@ app.config(function($stateProvider, $urlRouterProvider){
       templateUrl: '/static/templates/main.html',
       controller: 'MainCtrl'
     })
+    .state('login', {
+      url: "/login",
+      templateUrl: 'static/templates/login.html',
+      controller: 'MainCtrl'
+    })
     .state('ingreso', {
       url: "/ingreso",
       templateUrl: 'static/templates/ingreso.html',
@@ -27,11 +32,15 @@ app.config(function($stateProvider, $urlRouterProvider){
       templateUrl: 'static/templates/cursos.html',
       controller: 'MainCtrl'
     })
-
+    .state('add-alumno', {
+      url: "/add",
+      templateUrl: 'static/templates/add_alumno.html',
+      controller: 'MainCtrl'
+    });
   $urlRouterProvider.otherwise('/');
 });
 
-app.controller('imagesCtrl', function ($scope, $http) {
+app.controller('imagesCtrl', function($scope, $http, $state) {
     $http.get('../static/js/posts.json').
     success(function(data, status, headers, config) {
       $scope.json = data;
@@ -40,21 +49,40 @@ app.controller('imagesCtrl', function ($scope, $http) {
     var pass = [];
     $scope.imageId = function(index){
       pass.push($scope.json.images[index].id);
+
       if (pass.length >= 4) {
-        console.log(pass);
-      };
+        var str = pass.join("");
+        if (str == 1235) {
+          swal("Bienvenido!", "", "success")
+          $state.go('cursos');
+
+        }
+        else {
+          swal("Usuario equivocado", "Ingresa correctamente tu usuario!", "error")
+          pass.length = 0;
+        }
+      }
     };
 });
 
 app.controller('MainCtrl', function($scope, Alumnos, $state){
-  $scope.Alumno = {};
-  $scope.Alumno = function() {
+  $scope.newAlumno = {};
+  $scope.addAlumno = function() {
     Alumnos.addOne($scope.newAlumno)
       .then(function(res){
         // redirect to homepage once added
         $state.go('main');
     });
   };
+
+  $scope.deleteAlumno = function(id){
+    Alumnos.delete(id);
+    // update the list in ui
+    $scope.alumnos = $scope.alumnos.filter(function(todo){
+      return alumno.id !== id;
+    })
+  };
+
     Alumnos.all().then(function(res){
       $scope.alumnos = res.data;
   });

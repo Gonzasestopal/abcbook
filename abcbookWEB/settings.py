@@ -53,7 +53,7 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.security.SecurityMiddleware',
 )
 
-APPEND_SLASH = False
+#APPEND_SLASH = False
 
 ROOT_URLCONF = 'abcbookWEB.urls'
 
