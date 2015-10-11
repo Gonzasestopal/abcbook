@@ -479,12 +479,6 @@ h1 {
 }
 .curso{
 	border-radius: 10%;
-	
-}
-
-div img {
-	margin-top:20px;
-	margin-right:20px;
 }
 
 /*FOCUS*/
@@ -498,4 +492,10 @@ img {
  
 img:hover {
   -webkit-filter: brightness(50%);
+}
+.col.s3.m2.vocal {
+	width: 195px;
+}
+.card-img {
+	width: 150px;
 }

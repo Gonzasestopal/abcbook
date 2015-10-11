@@ -1,10 +1,9 @@
 <div class="container" ng-controller="imagesCtrl">
 	<div class="row">
-		<div class="col s4 m4" ng-repeat="image in json.images">
-          <div class="card curso" ng-click="imageId($index)">
+		<div class="col s4 m4 curso" ng-repeat="image in json.images">
+          <div class="card" ng-click="imageId($index)">
             <div class="card-image">
               <img ng-src="{{image.img}}">
-
             </div>
           </div>
         </div>
