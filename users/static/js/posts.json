@@ -56,9 +56,10 @@
     ],
     "vocales":[
         {
-            "id":"A",
+            "id":"a",
             "img":"https://raw.githubusercontent.com/abcbook/abcbookAPI/master/users/static/img/vowel_a.gif",
-            "btn":"boton1"
+            "btn":"boton1",
+            "audio": "audio_a.mp3"
         },
         {
             "id":"E",

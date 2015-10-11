@@ -1,17 +1,4 @@
-
- 	 <audio id="audio1" src="/static/audio/audio_a.mp3" preload></audio>
-	 <audio id="audio2" src="/static/audio/audio_e.mp3" preload></audio>
-	 <audio id="audio3" src="/static/audio/audio_i.mp3" preload></audio>
-	 <audio id="audio4" src="/static/audio/audio_o.mp3" preload></audio>
- 	 <audio id="audio5" src="/static/audio/audio_u.mp3" preload></audio>
- 	 <!-- <div class="container center">
-      <a class = "boton1 " class="btn-flat disabled"><img src="vowel_a.gif" ></a><p></p>
-      <a class = "boton2" class="btn-flat disabled"><img src="vowel_e.gif" ></a><p></p>
-      <a class = "boton3" class="btn-flat disabled"><img src="vowel_i.gif" ></a><p></p>
-      <a class = "boton4" class="btn-flat disabled"><img src="vowel_o.gif" ></a><p></p>
-      <a class = "boton5" class="btn-flat disabled"><img src="vowel_u.gif" ></a><p></p>
-    </div> -->
-    <div class="cursos" ng-controller="imagesCtrl">
+   <div class="cursos" ng-controller="imagesCtrl">
       <div class="container">
         <div class="row">
           <div class="col s12">
@@ -21,16 +8,16 @@
           </div>
         </div>
       </div>
+</div>
       <div class="container">
-        <div class="row">
-            <div class="col s m3" ng-repeat="vocal in json.vocales" id="{{vocal.btn}}">
-              <div class="card">
-                <div class="card-image">
-                  <img ng-src="{{vocal.img}}">
-                </div>
-              </div>
-            </div>
-        </div>
+      <div class="container strike">
       </div>
-    </div>
-    
+          <img style="height:225px"ng-audio-hover="static/audio/audio_a.mp3" volume-hover="0.5" start-hover="0.2"src="static/img/vowel_a.gif">
+          <img style="float:left;height:225px"ng-audio-hover="static/audio/audio_e.mp3" volume-hover="0.5" start-hover="0.2"src="static/img/vowel_e.gif">
+          <img style="float:left;height:225px"ng-audio-hover="static/audio/audio_i.mp3" volume-hover="0.5" start-hover="0.2"src="static/img/vowel_i.gif">
+          <img style="float:left;height:225px"ng-audio-hover="static/audio/audio_o.mp3" volume-hover="0.5" start-hover="0.2"src="static/img/vowel_o.gif">
+          <img style="float:left;height:225px"ng-audio-hover="static/audio/audio_u.mp3" volume-hover="0.5" start-hover="0.2"src="static/img/vowel_u.gif">
+          </div>
+      </div>
+      </div>
+</div>

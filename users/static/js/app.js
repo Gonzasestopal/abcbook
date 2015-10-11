@@ -1,6 +1,6 @@
 
 var app = angular.module('angular', [
-  'ui.router'
+  'ui.router','ngAudio'
 ]);
 
 app.constant('BASE_URL', 'http://localhost:8000/api/alumnos');
@@ -39,6 +39,14 @@ app.config(function($stateProvider, $urlRouterProvider){
     });
   $urlRouterProvider.otherwise('/');
 });
+
+app.controller("mp3Ctrl",function($scope,ngAudio){
+    $scope.sound = ngAudio.load("static/audio/audio_a.mp3"); // returns NgAudioObject
+    $scope.sound = ngAudio.load("static/audio/audio_e.mp3");
+    $scope.sound = ngAudio.load("static/audio/audio_i.mp3");
+    $scope.sound = ngAudio.load("static/audio/audio_o.mp3");
+    $scope.sound = ngAudio.load("static/audio/audio_u.mp3");
+})  
 
 app.controller('imagesCtrl', function($scope, $http, $state) {
     $http.get('../static/js/posts.json').
