@@ -21,10 +21,20 @@ app.config(function($stateProvider, $urlRouterProvider){
     })
 });
 
-app.controller('imagesCtrl', function($scope, $http, $state) {
+app.controller('cursosCtrl', function($scope, $http, $state) {
     $http.get('js/services/posts.json').
     success(function(data, status, headers, config) {
       $scope.json = data;
     }).
     error(function(data, status, headers, config) {});
+});
+
+app.controller('vocalsCtrl', function($scope, $http, ngAudio) {
+    $http.get('js/services/posts.json').
+    success(function(data, status, headers, config) {
+      $scope.sound = []; // returns NgAudioObject
+      $.each(data.vocales, function(index, value) {
+        $scope.sound.push({'audio': ngAudio.load(value.audio), 'image': value.img})
+      })
+    })
 });
